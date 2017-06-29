@@ -1,0 +1,151 @@
+
+
+*{font-family: 'Londrina Solid', cursive; font-size:115%; text-align: center;}
+
+html {
+	height:100%;
+}
+body{
+	position: relative;
+	min-height: 100%;
+}
+
+p {
+	content:"";
+	clear:both;
+	display: block;
+}
+
+#header1 {
+	margin-bottom: 30px; text-align: center; font-size:380%;
+	font-family: 'Monoton', cursive; 
+	background-image: url("../images/world.jpeg");
+	background-position: top;
+	color: purple;
+	height: 500px;
+	position: relative;
+}
+
+#plane{
+	z-index: 10;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+	width:100px;
+	height: 100px;
+	animation-name: animPlanen;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animPlanen {
+
+	0%   {right: 30px; top : 50px;}
+    25%  {left: 80px; top: 100px;}
+    50%  {right: 200px; top: 180px;}
+    75%  {left: 400px; top: 400px;}
+    100% {right: 600px; top: 500px;}
+}
+
+
+
+#plane2{
+	z-index: 10;
+    position: absolute;
+    top:85px;
+    left:0px;
+	width:100px;
+	height: 100px;
+	animation-name: animPlane;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes animPlane {
+
+	0%   {left: 30px; top : 50px;}
+    25%  {left: 80px; top: 100px;}
+    50%  {left: 200px; top: 180px;}
+    75%  {left: 400px; top: 400px;}
+    100% {left: 600px; top: 500px;}
+}
+
+#balloon{
+	z-index: 10;
+    position: absolute;
+    bottom:0px;
+    left:90%;
+	width:100px;
+	height: 170px;
+	animation-name: ballon;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes ballon {
+	from {bottom: 0%;}
+	to {bottom: 90%;}
+}
+
+
+#balloon1{
+	z-index: 10;
+    position: absolute;
+    bottom:0px;
+    left:3%;
+	width:100px;
+	height: 170px;
+	animation-name: balloon;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes balloon {
+	from {bottom: 0%;}
+	to {bottom: 90%;}
+}
+
+#wrapped {
+position: relative;
+height: 50px;
+overflow: hidden;
+}
+
+#country {
+    background-color: red;
+    color: black;
+    text-align: center;
+    font-size: 150%;
+    font-weight: 15px;
+    margin:0;
+    z-index: 10;
+    position: absolute;
+
+
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+ 
+@keyframes example {
+	from {left: -10%;}
+	to {left: 10%;}
+
+    0%   {color: yellow; background-color:red; width: 65%; height: 50px;}
+    25%  {color: red; background-color:yellow; width: 75%; height: 55px;}
+    50%  {color: brown; background-color:blue; width: 95%; height: 60px;}
+    75%  {color: purple; background-color:green; width: 75%; height: 55px;}
+    100% {color: maroon; background-color:red; width: 65%; height: 50px;}
+}

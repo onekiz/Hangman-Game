@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html style = "height: 100%;">
+
+<head>
+	<title>
+		Donald Duck TRAVELLING THE WORLD
+	</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  	<link href="https://fonts.googleapis.com/css?family=Freckle+Face|Monoton" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Londrina+Solid" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+
+
+<body style = "background-color: black; min-height: 100%; color: gray;">
+	<img id = "plane" src="assets/images/plane.png">
+	<img id = "plane2" src="assets/images/plane2.png">
+	<img id = "balloon" src="assets/images/balloon.jpg">
+	<img id = "balloon1" src="assets/images/balloon.jpg">
+
+	<div class= "jumbotron" id = "header1">
+	<img src="assets/images/Donald.gif" style = "height: 150px;">
+	Donald Duck Travelling World!!!!
+	<img src="assets/images/Donald2.gif" style = "height: 150px;">
+
+
+	</div>
+
+
+	<header   style ="margin-bottom: 60px; text-align: center">
+		<h1 style="font-family: 'Freckle Face', cursive; color:#b5acaa;"> WHERE IN WORLD IS DONALD DUCK???</h1>
+	</header>
+
+
+	<audio id="hitAudio">
+  		<source src="oh-boy.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="winAudio">
+  		<source src="win.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="lossAudio">
+  		<source src="urrhh.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="missAudio">
+  		<source src="duck-laugh.mp3" type="audio/mpeg">
+	</audio>
+
+	<div class = "container">
+
+		<div class = "row">
+		
+
+			
+			<div class = "col-md-6" style = "padding-left: 10px; position: relative; height: 500px; border: 2px dotted gray; border-radius: 6px;"">
+
+
+			<img id = "worldimg" src="assets/images/World_Map.jpg" style= "border-radius: 5px; width: 100%; height: 80%; margin-top: 8%;">
+
+			<img id ="image" src="" style="border-radius: 5px; width: 100%; height:100%; position: absolute; top: 0; z-index: 10;">
+
+
+			</div>
+			
+
+
+			<div class = "col-md-6" style = "height: 500px; border:2px dotted gray; border-radius: 6px; padding-top: 4%;">
+
+
+			<p style ="float: left; margin-left: 105px;"> Press any key to get started</p>
+			<button type="button" class="btn btn-secondary" id="btn2" onclick="hint()" style="float:right;"></button> 
+			<p> WINS: <span id="win"> </span></p>
+			<p> LOSSES: <span id="loss"> </span></p>
+			<p> Current word</p>
+			<div id = "wrapped"> 
+			<div id="country"></div></div>
+
+			<p> <span id="letter">letter</span> </p>
+			<p> Number of Guesses remaining <span id="lives"></span></p>
+			<p> Letters already guessed <span id = "usedLetter"> </span></p>
+
+			
+			<button type="button" class="btn btn-danger" id="btn1" onclick="showHide()">Show</button>
+			<button type="button" class="btn btn-primary" id ="New Game" onclick = "newGame()">New Game</button>
+
+			</div> 
+		
+		</div>
+
+		<div id = "footer" style = " height: 100px;"> </div>
+
+	</div>
+
+
+<script src="assets/javascript/javascript.js"></script>
+</body>
+</html>
